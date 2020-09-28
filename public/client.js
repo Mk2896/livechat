@@ -29,7 +29,7 @@ function sendMessage(msg){
     $('.msg_history').scrollTop(1000);
 }
 
-socket.on('message',(msg) => {
-    // console.log(msg);
-    sendMessage(msg);
+socket.on('chat',(msg) => {
+    console.log(msg);
+    // sendMessage(msg);
   });
