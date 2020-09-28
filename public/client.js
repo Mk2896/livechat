@@ -14,7 +14,7 @@ $('.msg_send_btn').click(function(){
          message:msg
      }
     //  sendMessage(data);
-    socket.emit('message',data);
+    socket.emit('Message-Vendor',data);
 
 });
 
