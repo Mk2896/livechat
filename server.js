@@ -29,6 +29,8 @@ const token = "1e6947ac7fb3a9529a9726eb692c8cc5";
 //   console.log(error);
 // })
 
+console.log("Hey");
+
 const io = require('socket.io')(http)
 
 io.on('connection',(socket) => {
