@@ -20,10 +20,10 @@ const io = require('socket.io')(http)
 io.on('connection',(socket) => {
     console.log('Connected..');
 
-    socket.on('message',(msg) => {
+    socket.on('Message-Vendor',(msg) => {
     //  console.log(msg);
-    // socket.broadcast.emit('message',msg);
-     io.emit('message', msg);
+    socket.broadcast.emit('Message-Vendor',msg);
+//      io.emit('message', msg);
     });
 
   
