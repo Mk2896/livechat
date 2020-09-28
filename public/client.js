@@ -29,6 +29,6 @@ function sendMessage(msg){
     $('.msg_history').scrollTop(1000);
 }
 
-socket.on('message',(msg) => {
+socket.on('Message-Vendor',(msg) => {
     sendMessage(msg);
   });
