@@ -23,6 +23,7 @@ axios.get("http://urmenu.co.uk/api/get/vendor", {
 })
 .then((response) => {
   vendors = response;
+  console.log(vendors);
 })
 .catch(function(error) {
   console.log(error);
