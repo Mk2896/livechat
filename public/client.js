@@ -14,7 +14,7 @@ $('.msg_send_btn').click(function(){
          message:msg
      }
     //  sendMessage(data);
-    socket.emit('Message-Vendor',data);
+    socket.emit('message',data);
 
 });
 
@@ -29,6 +29,6 @@ function sendMessage(msg){
     $('.msg_history').scrollTop(1000);
 }
 
-socket.on('Message-Vendor',(msg) => {
+socket.on('message',(msg) => {
     sendMessage(msg);
   });
