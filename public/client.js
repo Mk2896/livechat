@@ -30,5 +30,6 @@ function sendMessage(msg){
 }
 
 socket.on('message',(msg) => {
-    sendMessage(msg);
+    console.log(msg);
+    // sendMessage(msg);
   });
