@@ -18,7 +18,7 @@ app.get('/',(req,res) => {
 
 const token = "1e6947ac7fb3a9529a9726eb692c8cc5";
 
-axios.post("", {
+axios.get("http://urmenu.co.uk/api/get/vendor", {
   token: token,
 })
 .then((response) => {
