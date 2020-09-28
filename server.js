@@ -18,16 +18,16 @@ app.get('/',(req,res) => {
 
 const token = "1e6947ac7fb3a9529a9726eb692c8cc5";
 
-axios.get("http://urmenu.co.uk/api/get/vendor", {
-  token: token,
-})
-.then((response) => {
-  vendors = response;
-  console.log(vendors);
-})
-.catch(function(error) {
-  console.log(error);
-})
+// axios.get("http://urmenu.co.uk/api/get/vendor", {
+//   token: token,
+// })
+// .then((response) => {
+//   vendors = response;
+//   console.log(vendors);
+// })
+// .catch(function(error) {
+//   console.log(error);
+// })
 
 const io = require('socket.io')(http)
 
@@ -36,7 +36,7 @@ io.on('connection',(socket) => {
 
     socket.on('message',(msg) => {
     // socket.broadcast.emit('Message-Vendor',msg);
-     io.emit('message', vendors);
+     io.emit('message', msg);
     });
 
   
