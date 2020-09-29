@@ -23,7 +23,7 @@ io.on('connection',(socket) => {
 
     socket.on('message',(msg) => {
     // socket.broadcast.emit('Message-Vendor',msg);
-     io.emit('order', 4);
+     io.emit('message', msg);
     });
 
     socket.on('chat',(data) => {
